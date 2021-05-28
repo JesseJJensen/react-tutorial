@@ -36,7 +36,7 @@ function BookList() {
   )
 }
 
-const Book = ({img, title, author}) => {
+const Book = ({ img, title, author }) => {
   // attribute, eventHandler
   //onClick, onMouseOver
   const clickHandler = () => {
@@ -45,9 +45,11 @@ const Book = ({img, title, author}) => {
   return (
     <article className='book'>
       <img src={img} alt='' />
-      <h1>{title}</h1>
+      <h1 onClick={()=> console.log(title)}>{title}</h1>
       <h4>{author}</h4>
-      <button type="button" onClick={clickHandler}>reference example</button>
+      <button type='button' onClick={clickHandler}>
+        reference example
+      </button>
     </article>
   )
 }
