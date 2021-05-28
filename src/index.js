@@ -4,6 +4,7 @@ import ReactDom from 'react-dom'
 //css
 import './index.css'
 
+//setup vars
 function BookList() {
   return (
     <section className='booklist'>
@@ -11,30 +12,25 @@ function BookList() {
       <Book />
       <Book />
       <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
     </section>
   )
 }
+
+const author = 'Margaret Wise Brown';
 const Book = () => {
+  const title = 'Good Night Moon';
   return (
     <article className='book'>
-      <Image />
-      <Title />
-      <Author />
+      <img
+        src='https://m.media-amazon.com/images/I/81AQ8xjnNPL._AC_UY218_.jpg'
+        alt=''
+      />
+      <h1>{title}</h1>
+      <h4>{author.toUpperCase()}</h4>
+      <p>{6 + 6}</p>
     </article>
   )
 }
-const Image = () => (
-  <img
-    src='https://m.media-amazon.com/images/I/81AQ8xjnNPL._AC_UY218_.jpg'
-    alt=''
-  />
-)
 
 const Title = () => <h1>GOODNIGHT MOON</h1>
 const Author = () => (
