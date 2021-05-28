@@ -30,15 +30,15 @@ function BookList() {
   return (
     <section className='booklist'>
       {books.map((book) => {
-        const { img, title, author } = book
         return <Book key={book.id} {...book}></Book>
       })}
     </section>
   )
 }
 
-const Book = (props) => {
-  const { img, title, author } = props //add props above to use this
+const Book = ({img, title, author}) => {
+  // attribute, eventHandler
+  //onClick, onMouseOver
 
   return (
     <article className='book'>
