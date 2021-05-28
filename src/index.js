@@ -5,51 +5,33 @@ import ReactDom from 'react-dom'
 import './index.css'
 
 //setup vars
-const firstBook = {
-  img: 'https://m.media-amazon.com/images/I/81AQ8xjnNPL._AC_UY218_.jpg',
-  title: 'Good Night Moon',
-  author: 'Margaret Wise Brown',
-}
-
-const secondBook = {
-  img: 'https://m.media-amazon.com/images/I/91UvdebBM-L._AC_UL320_.jpg',
-  title: 'Chicka Chicka Boom Boom',
-  author: 'John Archambault',
-}
+const books = [
+  {
+    img: 'https://m.media-amazon.com/images/I/81AQ8xjnNPL._AC_UY218_.jpg',
+    title: 'Good Night Moon',
+    author: 'Margaret Wise Brown',
+  },
+  {
+    img: 'https://m.media-amazon.com/images/I/91UvdebBM-L._AC_UL320_.jpg',
+    title: 'Chicka Chicka Boom Boom',
+    author: 'John Archambault',
+  },
+];
 
 function BookList() {
   return (
-    <section className='booklist'>
-      <Book
-        img={firstBook.img}
-        title={firstBook.title}
-        author={firstBook.author}
-      >
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          consectetur ducimus quia inventore voluptates assumenda laboriosam
-          nisi autem qui facere, similique eligendi mollitia eius, corrupti
-          incidunt officia a eaque? Hic.
-        </p>
-      </Book>
-
-      <Book
-        img={secondBook.img}
-        title={secondBook.title}
-        author={secondBook.author}
-      />
-    </section>
+    <section className='booklist'>{books}</section>
   )
 }
 
 const Book = (props) => {
-  const { img, title, author, children } = props //add props above to use this
+  const { img, title, author } = props //add props above to use this
+  console.log(props)
   return (
     <article className='book'>
       <img src={img} alt='' />
       <h1>{title}</h1>
       <h4>{author.toUpperCase()}</h4>
-      {props.children}
     </article>
   )
 }
