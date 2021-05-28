@@ -40,7 +40,9 @@ const Book = (props) => {
   const { img, title, author } = props
   // attribute, eventHandler
   //onClick, onMouseOver
-  const clickHandler = () => {
+  const clickHandler = (e) => {
+    console.log(e);
+    console.log(e.target);
     alert('hello world')
   }
   const complexExample = (author) => {
