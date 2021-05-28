@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: aliceblue;
 }
 
 body {
@@ -22,6 +23,7 @@ body {
 @media screen and (min-width: 768px) {
   .booklist {
     grid-template-columns: repeat(3, 1fr);
+    align-items: start;
   }
 }
 
@@ -36,7 +38,8 @@ body {
 }
 
 .book h4 {
-  color: #66617d98;
+  color: #617d98;
+  font-size: 0.75rem;
   letter-spacing: 5px;
   margin-top: 0.25rem;
 }
