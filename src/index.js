@@ -17,10 +17,10 @@ const books = [
     author: 'John Archambault',
   },
 ];
-
+const names = ['john', 'peter', 'susan']
 function BookList() {
   return (
-    <section className='booklist'>{books}</section>
+    <section className='booklist'>{names}</section>
   )
 }
 
