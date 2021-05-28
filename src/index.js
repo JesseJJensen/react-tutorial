@@ -7,24 +7,35 @@ import './index.css'
 //setup vars
 const books = [
   {
+    id: 1,
     img: 'https://m.media-amazon.com/images/I/81AQ8xjnNPL._AC_UY218_.jpg',
     title: 'Good Night Moon',
     author: 'Margaret Wise Brown',
   },
   {
+    id: 2,
     img: 'https://m.media-amazon.com/images/I/91UvdebBM-L._AC_UL320_.jpg',
     title: 'Chicka Chicka Boom Boom',
     author: 'John Archambault',
   },
+  {
+    id: 3,
+    img: 'https://m.media-amazon.com/images/I/71XjIc94zgL._AC_UL320_.jpg',
+    title: 'Bug Soup',
+    author: 'Vince Cleghorne',
+  },
 ]
 
-const names = ['john', 'peter', 'susan'];
-const newNames = names.map((name) => {
-  return <h1>{name}</h1>;
-});
-console.log(newNames)
 function BookList() {
-  return <section className='booklist'>{newNames}</section>}
+  return (
+    <section className='booklist'>
+      {books.map((book) => {
+        const { img, title, author } = book
+        return <Book key={book.id} {...book}></Book>
+      })}
+    </section>
+  )
+}
 
 const Book = (props) => {
   const { img, title, author } = props //add props above to use this
@@ -33,7 +44,7 @@ const Book = (props) => {
     <article className='book'>
       <img src={img} alt='' />
       <h1>{title}</h1>
-      <h4>{author.toUpperCase()}</h4>
+      <h4>{author}</h4>
     </article>
   )
 }
