@@ -5,6 +5,10 @@ import ReactDom from 'react-dom'
 import './index.css'
 
 //setup vars
+const author = 'Margaret Wise Brown'
+const title = 'Good Night Moon'
+const img = 'https://m.media-amazon.com/images/I/81AQ8xjnNPL._AC_UY218_.jpg'
+
 function BookList() {
   return (
     <section className='booklist'>
@@ -16,15 +20,10 @@ function BookList() {
   )
 }
 
-const author = 'Margaret Wise Brown';
 const Book = () => {
-  const title = 'Good Night Moon';
   return (
     <article className='book'>
-      <img
-        src='https://m.media-amazon.com/images/I/81AQ8xjnNPL._AC_UY218_.jpg'
-        alt=''
-      />
+      <img src={img} alt='' />
       <h1>{title}</h1>
       <h4>{author.toUpperCase()}</h4>
       <p>{6 + 6}</p>
@@ -32,11 +31,5 @@ const Book = () => {
   )
 }
 
-const Title = () => <h1>GOODNIGHT MOON</h1>
-const Author = () => (
-  <h4 style={{ color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem' }}>
-    Margaret Wise Brown
-  </h4>
-)
 
 ReactDom.render(<BookList />, document.getElementById('root'))
