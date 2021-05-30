@@ -1,4 +1,4 @@
-export const books = [
+export const data = [
   {
     id: 1,
     img: 'https://m.media-amazon.com/images/I/81AQ8xjnNPL._AC_UY218_.jpg',
