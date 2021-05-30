@@ -5,16 +5,13 @@ import ReactDom from 'react-dom'
 import './index.css'
 
 import {data} from './books'
-import Book from './Book'
-
-//setup vars
-
+import SpecificBook from './Book'
 
 function BookList() {
   return (
     <section className='booklist'>
       {data.map((book) => {
-        return <Book key={book.id} {...book}></Book>
+        return <SpecificBook key={book.id} {...book}></SpecificBook>
       })}
     </section>
   )
